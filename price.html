@@ -12,69 +12,74 @@
 
 <body>
     <header class="header">
-        <nav class="menu">
-            <a><img src="/svg/logo.svg" alt="Логотип Барбершоп Бородинский" width="371" height="155"></a>
-            <ul>
-                <li><a href="#">Информация</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Прайс-лист</a></li>
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#">Контакты</a></li>
+        <nav class="main-nav">
+            <a class="main-nav__logo"><img src="svg/index-logo.svg" alt="Логотип Барбершоп Бородинский" width="371"
+                    height="155"></a>
+            <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="#news">Новости</a></li>
+                <li class="main-nav__item"><a href="price.html">Прайс-лист</a></li>
+                <li class="main-nav__item"><a href="#advantages">Информация</a></li>
+                <li class="main-nav__item"><a href="catalog.html">Магазин</a></li>
+                <li class="main-nav__item"><a href="#contacts">Контакты</a></li>
             </ul>
-            <ul>
-                <li><a href="#">Вход</a></li>
+            <ul class="main-nav__login-list">
+                <li class="main-nav__login-item"><a href="#">Вход</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Прайс-лист</h1>
-        <ul>
-            <li>Главная</li>
-            <li>Прайс-лист</li>
-        </ul>
+        <div class="breadcrumbs">
+            <h1 class="breadcrumbs__title">Прайс-лист</h1>
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__item-link" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__item-link current" href="#">Прайс-лист</a>
+                </li>
+            </ul>
+        </div>
 
-        <section>
-            <h2>Истинно мужская классика</h2>
-            <p>
+        <section class="products">
+            <h2 class="products__title">Истинно мужская классика</h2>
+            <p class="products__text">
                 Мы используем только лучшие средства:
             </p>
-            <ul>
-                <li>Baxter of California</li>
-                <li>Mr Natty</li>
-                <li>Suavecito</li>
-                <li>Suavecito</li>
+            <ul class="products__list">
+                <li class="products__item">Baxter of California</li>
+                <li class="products__item">Mr Natty</li>
+                <li class="products__item">Suavecito</li>
+                <li class="products__item">Suavecito</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Цены на услуги наших мастеров:</h2>
-            <table>
+        <section class="price">
+            <h2 class="price__title">Цены на услуги наших мастеров:</h2>
+            <table class="price_table">
                 <tr>
-                    <td>Стрижка</td>
-                    <td>1500 ₽</td>
+                    <td class="price__table-text">Стрижка</td>
+                    <td class="price__table-price">1500 ₽</td>
                 </tr>
                 <tr>
-                    <td>Стрижка бороды</td>
-                    <td>500 ₽</td>
+                    <td class="price__table-text">Стрижка бороды</td>
+                    <td class="price__table-price">500 ₽</td>
                 </tr>
                 <tr>
-                    <td>Накрутка усов</td>
-                    <td>350 ₽</td>
+                    <td class="price__table-text">Накрутка усов</td>
+                    <td class="price__table-price">350 ₽</td>
                 </tr>
             </table>
         </section>
 
-        <section>
-            <div>
-                <h2>Несколько слов о нас:</h2>
-                <p>
+        <section class="aboutus">
+            <div class="aboutus__column">
+                <h2 class="aboutus__title">Несколько слов о нас:</h2>
+                <p class="aboutus__text">
                     Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас
                     - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.
                 </p>
             </div>
-            <div>
-                <p>
+            <div class="aboutus__column">
+                <p class="aboutus__text">
                     Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое
                     время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу,
                     чувствовать
@@ -84,27 +89,27 @@
         </section>
     </main>
 
-    <footer>
-        <div>
+    <footer class="footer">
+        <div class="footer__address">
             Барбершоп «Бородинский»<br>
             Адрес: <address>г. Санкт-Петербург, б. Конюшенная, д. 19/8</address><br>
-            <a href="map.html">Как нас найти?</a><br>
-            Телефон: <a href="tel:+74956660266">+7 (495) 666-02-66</a><br>
+            <a class="footer__map-link" href="map.html">Как нас найти?</a><br>
+            Телефон: <a class="footer__tel-link" href="tel:+74956660266">+7 (495) 666-02-66</a><br>
         </div>
-        <div>
-            <p>Давайте дружить!</p>
-            <ul>
-                <li><a href="#">Вконтакте</a></li>
-                <li><a href="#">Фейсбук</a></li>
-                <li><a href="#">Инстаграм</a></li>
+        <div class="footer__wrapper">
+            <p class="footer__text">Давайте дружить!</p>
+            <ul class="footer__socials-list">
+                <li class="footer__socials-item"><a class="footer__socials-link" href="#">Вконтакте</a></li>
+                <li class="footer__socials-item"><a class="footer__socials-link" href="#">Фейсбук</a></li>
+                <li class="footer__socials-item"><a class="footer__socials-link" href="#">Инстаграм</a></li>
             </ul>
         </div>
-        <p>
+        <p class="footer__copy">
             Разработано:
-            <a href="#">HTML Academy</a>
+            <a class="footer__copy-link" href="#">HTML Academy</a>
         </p>
     </footer>
-    
+
 </body>
 
 </html>
