@@ -15,11 +15,11 @@
         <nav class="menu">
             <a><img src="/svg/logo.svg" width="371" height="155" alt="Логотип Барбершоп Бородинский"></a>
             <ul>
-                <li><a href="#">Информация</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Прайс-лист</a></li>
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="index.html#news">Новости</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="catalog.html">Магазин</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
             </ul>
             <ul>
                 <li><a href="#">Вход</a></li>
@@ -48,57 +48,59 @@
             <h2 class="visually-hidden">Фильтр товаров</h2>
 
             <form class="filter__form1" action="https://echo.htmlacademy.ru" method="POST">
-                <fieldset>
-                    <legend class="filter__form1-legend">Производители:</legend>
-                    <ul class="filter__form1-list">
+                <fieldset class="filter__fieldset1">
+                    <legend class="filter__fieldset1-legend">Производители:</legend>
+                    <ul class="filter__fieldset1-list">
                         <li class="filter__form1-item">
-                            <input class="filter__form1-item-input" type="checkbox" name="Baxter_of_California"
+                            <input class="filter__fieldset1-item-input" type="checkbox" name="Baxter_of_California"
                                 id="Baxter_of_California" checked>
-                            <label class="filter__form1-item-label" for="Baxter_of_California">Baxter of
+                            <label class="filter__fieldset1-item-label" for="Baxter_of_California">Baxter of
                                 California</label>
                         </li>
-                        <li class="filter__form1-item">
-                            <input class="filter__form1-item-input" type="checkbox" name="Mr_Natty" id="Mr_Natty">
-                            <label class="filter__form1-item-label" for="Mr_Natty">Mr Natty</label>
+                        <li class="filter__fieldset1-item">
+                            <input class="filter__fieldset1-item-input" type="checkbox" name="Mr_Natty" id="Mr_Natty">
+                            <label class="filter__fieldset1-item-label" for="Mr_Natty">Mr Natty</label>
                         </li>
-                        <li class="filter__form1-item">
-                            <input class="filter__form1-item-input" type="checkbox" name="Suavecito" id="Suavecito"
+                        <li class="filter__fieldset1-item">
+                            <input class="filter__fieldset1-item-input" type="checkbox" name="Suavecito" id="Suavecito"
                                 checked>
-                            <label class="filter__form1-item-label" for="Suavecito">Suavecito</label>
+                            <label class="filter__fieldset1-item-label" for="Suavecito">Suavecito</label>
                         </li>
-                        <li class="filter__form1-item">
-                            <input class="filter__form1-item-input" type="checkbox" name="Malin_Goetz" id="Malin_Goetz">
-                            <label class="filter__form1-item-label" for="Malin_Goetz">Malin+Goetz</label>
+                        <li class="filter__fieldset1-item">
+                            <input class="filter__fieldset1-item-input" type="checkbox" name="Malin_Goetz" id="Malin_Goetz">
+                            <label class="filter__fieldset1-item-label" for="Malin_Goetz">Malin+Goetz</label>
                         </li>
-                        <li class="filter__form1-item">
-                            <input class="filter__form1-item-input" type="checkbox" name="Murray_s" id="Murray_s">
-                            <label class="filter__form1-item-label" for="Murray_s">Murray’s</label>
+                        <li class="filter__fieldset1-item">
+                            <input class="filter__fieldset1-item-input" type="checkbox" name="Murray_s" id="Murray_s">
+                            <label class="filter__fieldset1-item-label" for="Murray_s">Murray’s</label>
                         </li>
-                        <li class="filter__form1-item">
-                            <input class="filter__form1-item-input" type="checkbox" name="American_Crew"
+                        <li class="filter__fieldset1-item">
+                            <input class="filter__fieldset1-item-input" type="checkbox" name="American_Crew"
                                 id="American_Crew" checked>
-                            <label class="filter__form1-item-label" for="American_Crew">American Crew</label>
+                            <label class="filter__fieldset1-item-label" for="American_Crew">American Crew</label>
                         </li>
                     </ul>
                 </fieldset>
 
-                <fieldset class="filter__form2">
-                    <legend class="filter__form2-legend">Группы товаров:</legend>
-                    <ul class="filter__form2-list">
-                        <li class="filter__form2-item">
-                            <input class="filter__form2-item-radio" type="radio" name="group_shop" id="shave">
-                            <label class="filter__form2-item-label" for="shave">Бритвенные принадлежности</label>
+                <fieldset  class="filter__fieldset2-fieldset">
+                    <legend class="filter__fieldset2-legend">Группы товаров:</legend>
+                    <ul class="filter__fieldset2-list">
+                        <li class="filter__fieldset2-item">
+                            <input class="filter__fieldset2-item-radio" type="radio" name="group_shop" id="shave">
+                            <label class="filter__fieldset2-item-label" for="shave">Бритвенные принадлежности</label>
                         </li>
-                        <li class="filter__form2-item">
-                            <input class="filter__form2-item-radio" type="radio" name="group_shop" id="Care_products">
-                            <label class="filter__form2-item-label" for="Care_products">Средства для ухода</label>
+                        <li class="filter__fieldset2-item">
+                            <input class="filter__fieldset2-item-radio" type="radio" name="group_shop" id="Care_products">
+                            <label class="filter__fieldset2-item-label" for="Care_products">Средства для ухода</label>
                         </li>
-                        <li class="filter__form2-item">
-                            <input class="filter__form2-item-radio" type="radio" name="group_shop" id="Accessories">
-                            <label class="filter__form2-item-label" for="Accessories">Аксессуары</label>
+                        <li class="filter__fieldset2-item">
+                            <input class="filter__fieldset2-item-radio" type="radio" name="group_shop" id="Accessories">
+                            <label class="filter__fieldset2-item-label" for="Accessories">Аксессуары</label>
                         </li>
                     </ul>
                 </fieldset>
+
+                <button class="btn filter__form-btn" type="submit"></button>
             </form>
         </section>
 
@@ -108,10 +110,10 @@
                 <li class="catalog__item">
                     <img class="catalog__item-img" src="images/set.jpg" width="220" height="165" alt="">
                     <a class="catalog__item-link">
-                        <p class="catalog__item-text">
+                        <h3 class="catalog__item-text">
                             <span>Набор для путешествий</span>
                             «Baxter of California»
-                        </p>
+                        </h3>
                     </a>
                     <div class="catalog__item-wrapper">
                         <b class="catalog__item-price">2 900 ₽</b>
@@ -121,10 +123,10 @@
                 <li class="catalog__item">
                     <img class="catalog__item-img" src="images/conditioner.jpg" width="220" height="165" alt="">
                     <a class="catalog__item-link">
-                        <p class="catalog__item-text">
+                        <h3 class="catalog__item-text">
                             <span>Увлажняющий кондиционер</span>
                             «Baxter of California»
-                        </p>
+                        </h3>
                     </a>
                     <div class="catalog__item-wrapper">
                         <b class="catalog__item-price">750 ₽</b>
@@ -134,10 +136,10 @@
                 <li class="catalog__item">
                     <img class="catalog__item-img" src="images/gel.jpg" width="220" height="165" alt="">
                     <a class="catalog__item-link">
-                        <p class="catalog__item-text">
+                        <h3 class="catalog__item-text">
                             <span>Гель для волос</span>
                             «SUAVECITO»
-                        </p>
+                        </h3>
                     </a>
                     <div class="catalog__item-wrapper">
                         <b class="catalog__item-price">290 ₽</b>
@@ -147,10 +149,10 @@
                 <li class="catalog__item">
                     <img class="catalog__item-img" src="images/clay.jpg" width="220" height="165" alt="">
                     <a class="catalog__item-link">
-                        <p class="catalog__item-text">
+                        <h3 class="catalog__item-text">
                             <span>Глина для укладки волос</span>
                             «American crew»
-                        </p>
+                        </h3>
                     </a>
                     <div class="catalog__item-wrapper">
                         <b class="catalog__item-price">500 ₽</b>
@@ -160,10 +162,10 @@
                 <li class="catalog__item">
                     <img class="catalog__item-img" src="images/AMERICAN-CREW-gel.jpg" width="220" height="165" alt="">
                     <a class="catalog__item-link">
-                        <p class="catalog__item-text">
+                        <h3 class="catalog__item-text">
                             <span>Гель для волос</span>
                             «AMERICAN CREW»
-                        </p>
+                        </h3>
                     </a>
                     <div class="catalog__item-wrapper">
                         <b class="catalog__item-price">300 ₽</b>
@@ -173,10 +175,10 @@
                 <li class="catalog__item">
                     <img class="catalog__item-img" src="images/set-shave.jpg" width="220" height="165" alt="">
                     <a class="catalog__item-link">
-                        <p class="catalog__item-text">
+                        <h3 class="catalog__item-text">
                             <span>Набор для бритья</span>
                             «AMERICAN CREW»
-                        </p>
+                        </h3>
                     </a>
                     <div class="catalog__item-wrapper">
                         <b class="catalog__item-price">3 900 ₽</b>
@@ -187,12 +189,14 @@
             </ul>
         </section>
 
-        <ul class="pagination__list">
-            <li class="pagination__item"><a class="pagination__item-link" href="#">1</a></li>
-            <li class="pagination__item"><a class="pagination__item-link" href="#">2</a></li>
-            <li class="pagination__item"><a class="pagination__item-link" href="#">3</a></li>
-            <li class="pagination__item"><a class="pagination__item-link" href="#">4</a></li>
-        </ul>
+        <section class="pagination">
+            <ul class="pagination__list">
+                <li class="pagination__item"><a class="pagination__item-link" href="#">1</a></li>
+                <li class="pagination__item"><a class="pagination__item-link" href="#">2</a></li>
+                <li class="pagination__item"><a class="pagination__item-link" href="#">3</a></li>
+                <li class="pagination__item"><a class="pagination__item-link" href="#">4</a></li>
+            </ul>
+        </section>
 
     </main>
 
