@@ -1,18 +1,160 @@
+/* Variables */
 :root {
     --basic-black: #000000;
     --basic-extra-dark: #242424;
+    /*hover main menu, bg for footer*/
     --basic-dark: #aba9a7;
-
+    /*bread, btn radio text*/
     --basic-neutral: #e5e5e5;
     --basic-extra-light: #f8f5f2;
-
+    /*feature text*/
     --basic-white: #ffffff;
+    /*text*/
 
     --special: #663d15;
-
+    /*btn*/
 }
 
 body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+
     font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+
+    background-color: var(--basic-white);
+    background-image: url('../images/bg-white.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    /*что бы картинка ни когда не была больше заданных значений*/
+    height: auto;
+    /*чтобы картинка сохраняла пропорции*/
+}
+
+.title-h3 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+/* main-nav */
+
+.main-nav {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--basic-white);
+    background: transparent;
+}
+
+.main-nav-wrapper {
+    background-color: var(--basic-black);
+}
+
+.main-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.main-nav__item-link-current a:not[href] {
+    background-color: var(--basic-black);
+}
+
+.main-nav__item-link,
+.main-nav__login-link {
+    color: var(--basic-white);
+}
+
+.main-nav__item-link:hover,
+.main-nav__item-link:focus,
+.main-nav__login-link:hover,
+.main-nav__login-link:focus {
+    background-color: var(--basic-extra-dark);
+}
+
+
+/* advantages */
+
+.advantages__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--basic-white);
+}
+
+.advantages__item {
+    text-align: center;
+}
+
+
+
+
+
+
+.wrap_2_sections {
+    background-color: var(--basic-white);
+    background-image: url('../images/bg-white.jpg');
+    background-position: center, 0 0;
+    background-repeat: no-repeat, repeat;
+}
+
+
+/* news */
+
+.news__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* gallery */
+
+.gallery__figure {
+    background-color: var(--basic-dark);
+    border: 7px solid var(--basic-white);
+}
+
+.btn {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-black);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background-color: var(--special);
+}
+
+.btn.disabled,
+.btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: var(--basic-black);
+}
+
+footer a,
+footer p,
+footer address,
+footer div {
+    color: var(--basic-white);
+}
