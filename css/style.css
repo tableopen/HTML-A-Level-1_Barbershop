@@ -29,8 +29,8 @@ body {
 
     background-color: var(--basic-white);
     background-image: url('../images/bg-white.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-repeat: repeat;
 }
 
 a {
@@ -38,10 +38,28 @@ a {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     /*что бы картинка ни когда не была больше заданных значений*/
     height: auto;
     /*чтобы картинка сохраняла пропорции*/
+}
+
+.page-body {
+    background-image: url('../images/bg-index.jpg');
+    /* background-position: 0 0; */
+    /* background-repeat: no-repeat; */
+    /* background-size: 2560px; */
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
 }
 
 .title-h3 {
@@ -88,6 +106,10 @@ img {
 
 /* advantages */
 
+.advantages {
+    background-color: var(--basic-extra-dark);
+}
+
 .advantages__list {
     margin: 0;
     padding: 0;
@@ -98,11 +120,6 @@ img {
 .advantages__item {
     text-align: center;
 }
-
-
-
-
-
 
 .wrap_2_sections {
     background-color: var(--basic-white);
@@ -152,9 +169,172 @@ img {
     background-color: var(--basic-black);
 }
 
-footer a,
-footer p,
-footer address,
-footer div {
+
+/* order */
+
+.order__form-2-inputs-wrap input {
+    font: inherit;
+    background-color: transparent;
+    border: 2px solid var(--basic-black);
+}
+
+.order__form-2-inputs-wrap input:focus {}
+
+
+/* footer */
+
+.footer {
     color: var(--basic-white);
+    background-color: var(--basic-extra-dark);
+    background-image: url('../images/bg-footer.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.footer__address a {
+    color: var(--basic-white);
+}
+
+.footer__wrapper {
+    text-align: center;
+}
+
+.footer__socials-list {
+    list-style: none;
+}
+
+.footer__socials-link {
+    color: inherit;
+}
+
+.footer__socials-link:hover,
+.footer__socials-link:focus {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.footer__socials-link:hover svg path,
+.footer__socials-link:focus svg path {
+    fill: var(--basic-black);
+}
+
+.footer__socials-link {
+    /* color: inherit; */
+}
+
+/* modal */
+
+.modal {
+    background-color: var(--basic-extra-light);
+    background-image: url('../images/bg-white.jpg');
+    background-position: 0 0;
+    background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+
+/* login */
+
+.login__title {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.login__form input {
+    font: inherit;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--basic-extra-light);
+    border: 2px solid var(--basic-black);
+}
+
+.login__form input:focus {
+    border-color: var(--special);
+}
+
+.login__form-login-input {
+    background-image: url('../svg/user.svg');
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login__form-password-input {
+    background-image: url('../svg/lock.svg');
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login__form-link-fix-pass {
+    columns: var(--basic-black);
+    text-decoration: underline;
+}
+
+.login__form-link-fix-pass:hover,
+.login__form-link-fix-pass:focus {
+    text-decoration: none;
+}
+
+
+/* catalog */
+
+/* breadcrumbs */
+
+.breadcrumbs__list {
+    list-style: none;
+}
+
+.breadcrumbs__item-link {
+    color: var(--basic-black);
+}
+
+.breadcrumbs__item-link:hover,
+.breadcrumbs__item-link:focus {
+    text-decoration: underline;
+}
+
+.breadcrumbs__item .current {
+    color: var(--basic-dark);
+}
+
+
+/* filter */
+
+.filter__form legend {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.filter__fieldset1-list,
+.filter__fieldset2-list {
+    list-style: none;
+    line-height: 18px;
+}
+
+.filter__fieldset1-item-input:hover+label,
+.filter__fieldset1-item-input:focus+label,
+.filter__fieldset2-item-radio:hover+label,
+.filter__fieldset2-item-radio:focus+label {
+    color: var(--special);
+}
+
+
+/* catalog */
+
+.catalog__list {
+    list-style: none;
+    line-height: 18px;
+}
+
+.catalog__item {
+    background-color: var(--basic-extra-light);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog__item-link {
+    color: var(--basic-black);
+}
+
+.catalog__item-text {
+    font-size: 14px;
+    line-height: 18px;
 }
