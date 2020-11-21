@@ -430,13 +430,14 @@ address {
     background-color: var(--basic-white);
 }
 
-/* modal */
+/* shadow for modal windows*/
 
 .modal {
     background-color: var(--basic-extra-light);
     background-image: url('../images/bg-white.jpg');
     background-position: 0 0;
     background-repeat: repeat;
+
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
@@ -466,8 +467,8 @@ address {
     margin-bottom: 15px;
 }
 
-.login__form input[type=text],
-.login__form input[type=password] {
+.login__form input[type="text"],
+.login__form input[type="password"] {
     height: 39px;
     width: 100%;
     padding-left: 13px;
@@ -485,8 +486,15 @@ input::placeholder {
     color: var(--basic-black);
 }
 
-.login__form input:focus {
+.login__form input[type="text"]:focus,
+.login__form input[type="password"]:focus {
+    outline-color: var(--special);
     border-color: var(--special);
+}
+
+.login__form label:hover,
+.login__form label:focus {
+    color: var(--special);
 }
 
 .login__form-login-input {
@@ -501,33 +509,56 @@ input::placeholder {
     background-repeat: no-repeat;
 }
 
-.login__form label:hover {
-    color: var(--special);
+.login__form-checkbox-label {
+    position: relative;
+
+    padding-left: 25px;
+
+    cursor: pointer;
 }
 
 .login__form-checkbox-input {
     position: absolute !important;
 
-    /* clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
-    /* clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(1px 1px 1px 1px);
+
+    clip: rect(1px, 1px, 1px, 1px);
     padding: 0 !important;
-    border: 0 !important; */
-    /* margin-left: 20px; */
-    /* height: 1px !important;
+    border: 0 !important;
+    margin-left: 20px;
+    height: 1px !important;
     width: 1px !important;
-    overflow: hidden; */
+    overflow: hidden;
     -webkit-appearance: none;
     appearance: none;
 }
 
-.login__form-checkbox-label {
-    padding-left: 20px;
+.login__form-checkbox-input+.login__form-checkbox-label::before {
+    position: absolute;
+    content: "";
+
+    margin-left: -25px;
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid var(--basic-black);
 }
 
-.login__form-checkbox-label::before {
-    border: 1px solid var(--basic-black);
-    background-image: url('svg/cross.svg');
+.login__form-checkbox-input:checked+.login__form-checkbox-label::before {
+    position: absolute;
+    content: "";
+
+    margin-left: -25px;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M11.12 2a.4.4 0 0 1 0 .57L8 5.71a.4.4 0 0 0 0 .57l3.14 3.14a.4.4 0 0 1 0 .57L10 11.13a.41.41 0 0 1-.57 0L6.27 8a.41.41 0 0 0-.57 0l-3.14 3.12a.41.41 0 0 1-.57 0L.85 10a.4.4 0 0 1 0-.57L4 6.28a.4.4 0 0 0 0-.57L.85 2.57a.4.4 0 0 1 0-.57L2 .86a.41.41 0 0 1 .57 0L5.7 4a.4.4 0 0 0 .57 0L9.41.87a.41.41 0 0 1 .57 0z'/%3E%3C/svg%3E");
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+}
+
+.login__form-checkbox-input:focus+.login__form-checkbox-label::before {
+    border-color: var(--special);
 }
 
 .login__form-link-fix-pass {
@@ -548,5 +579,48 @@ input::placeholder {
 .btn-close {
     position: absolute;
     top: 0;
-    right: -50px;
+    right: -24px;
+
+    width: 22px;
+    height: 22px;
+
+    font-size: 0;
+
+    border: 0;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.btn-close::before {
+    position: absolute;
+    content: "";
+
+    top: 0px;
+    right: -0px;
+
+    border: none;
+    width: 20px;
+    height: 20px;
+
+    background: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M11.12 2a.4.4 0 0 1 0 .57L8 5.71a.4.4 0 0 0 0 .57l3.14 3.14a.4.4 0 0 1 0 .57L10 11.13a.41.41 0 0 1-.57 0L6.27 8a.41.41 0 0 0-.57 0l-3.14 3.12a.41.41 0 0 1-.57 0L.85 10a.4.4 0 0 1 0-.57L4 6.28a.4.4 0 0 0 0-.57L.85 2.57a.4.4 0 0 1 0-.57L2 .86a.41.41 0 0 1 .57 0L5.7 4a.4.4 0 0 0 .57 0L9.41.87a.41.41 0 0 1 .57 0z' fill='%23D0D0D0'/%3E%3C/svg%3E");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+}
+
+.btn-close:hover::before,
+.btn-close:focus::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M11.12 2a.4.4 0 0 1 0 .57L8 5.71a.4.4 0 0 0 0 .57l3.14 3.14a.4.4 0 0 1 0 .57L10 11.13a.41.41 0 0 1-.57 0L6.27 8a.41.41 0 0 0-.57 0l-3.14 3.12a.41.41 0 0 1-.57 0L.85 10a.4.4 0 0 1 0-.57L4 6.28a.4.4 0 0 0 0-.57L.85 2.57a.4.4 0 0 1 0-.57L2 .86a.41.41 0 0 1 .57 0L5.7 4a.4.4 0 0 0 .57 0L9.41.87a.41.41 0 0 1 .57 0z' fill='%23fff'/%3E%3C/svg%3E");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+/* modal map */
+
+.map {
+    position: relative;
+    width: 780px;
 }

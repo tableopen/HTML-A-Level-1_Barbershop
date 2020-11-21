@@ -207,7 +207,7 @@
     <section class="modal login">
         <h2 class="login__title">Личный кабинет</h2>
         <p class="login__text">Ведите пожалуйста свой логин и пароль</p>
-        <form class="login__form" action="#" method="POST">
+        <form class="login__form" action="https://echo.htmlacademy.ru" method="GET">
             <div class="login__form-inner">
                 <label class="login__form-login-label" for="login"></label>
                 <input class="login__form-login-input" id="login" name="login" type="text" placeholder="Логин">
@@ -218,15 +218,15 @@
                     placeholder="Пароль">
             </div>
             <div>
-                <label class="login__form-checkbox-label">
-                    <input class="login__form-checkbox-input" id="checkbox" name="checkbox" type="checkbox">
-                    Запомните меня
-                </label>
+                <input class="login__form-checkbox-input" id="checkbox" name="checkbox" type="checkbox" checked>
+                <label class="login__form-checkbox-label" for="checkbox">Запомните меня</label>
+
+
                 <a class="login__form-link-fix-pass" href="#">Я забыл пароль!</a>
             </div>
             <button class="btn login__form-btn-submit" type="submit">Войти</button>
         </form>
-        <button class="btn-close login__btn-close" id="login_close" name="login_close" type="button">Закрыть</button>
+        <button class="btn-close login__btn-close" type="button">Закрыть</button>
     </section>
 
 
